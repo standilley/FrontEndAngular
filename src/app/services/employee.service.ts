@@ -15,4 +15,10 @@ export class EmployeeService {
   GetEmployees() : Observable<Response<Employee[]>>{
     return this.http.get<Response<Employee[]>>(this.apiUrl);
   }
+
+  CreateEmployee(employee: Employee) : Observable<Response<Employee[]>>{
+
+    return this.http.post<Response<Employee[]>>(this.apiUrl, employee );
+
+  }
 }
