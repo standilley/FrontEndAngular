@@ -1,0 +1,8 @@
+<div *ngIf="funcionario">
+    <app-employee-form 
+    [btnAcao]="btnAcao" 
+    [btnTitulo]="btnTitulo" 
+    [dadosFuncionario]="funcionario"
+    (onSubmit)="editarFuncionario($event)">
+    </app-employee-form>
+</div>

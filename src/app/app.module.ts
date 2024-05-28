@@ -10,6 +10,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { EmployeeFormComponent } from './components/employee-form/employee-form.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditComponent } from './pages/edit/edit.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     HomeComponent,
     RegisterComponent,
     EmployeeFormComponent,
+    EditComponent,
   ],
   imports: [
     BrowserModule,

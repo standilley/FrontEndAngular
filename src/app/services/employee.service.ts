@@ -16,9 +16,16 @@ export class EmployeeService {
     return this.http.get<Response<Employee[]>>(this.apiUrl);
   }
 
+  GetEmployee(id: number) : Observable<Response<Employee>>{
+    return this.http.get<Response<Employee>>(`${this.apiUrl}/${id}`);
+  }
+
   CreateEmployee(employee: Employee) : Observable<Response<Employee[]>>{
 
-    return this.http.post<Response<Employee[]>>(this.apiUrl, employee );
+    return this.http.post<Response<Employee[]>>(`${this.apiUrl}`, employee );
 
+  }
+  EditarFuncionario(employee: Employee): Observable<Response<Employee[]>> {
+    return this.http.put<Response<Employee[]>>(`${this.apiUrl}`, employee);
   }
 }
